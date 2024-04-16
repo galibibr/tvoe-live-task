@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/styles/globals.scss";
+import "@/styles/layout.scss";
 import { TheHeader } from "@/components/TheHeader";
 import { TheFooter } from "@/components/TheFooter";
 
@@ -17,10 +18,12 @@ export default function RootLayout({
    children: React.ReactNode;
 }>) {
    return (
-      <html lang="ru" >
-         <body className={inter.className}>
+      <html lang="ru">
+         <body
+            className={inter.className}
+            style={{ display: "flex", flexDirection: "column" }}>
             <TheHeader />
-            <main>{children}</main>
+            <main style={{ flexGrow: 1, minHeight: '2000px' }}>{children}</main>
             <TheFooter />
          </body>
       </html>

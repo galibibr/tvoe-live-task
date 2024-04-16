@@ -1,0 +1,166 @@
+$max_width: 724px;
+$min_width: 725px;
+
+header {
+   position: relative;
+   top: 0;
+   width: 100%;
+   z-index: 999;
+   
+   nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      background-color: #09090C;
+      z-index: 999;
+      border: 1px solid white;
+
+      .container {
+         padding: 21px 32px;
+         display: flex;
+         align-items: center;
+         gap: 16px;
+         @media (max-width: $max_width) {
+            padding: 14px 16px;
+         }
+
+         .logo {
+            cursor: pointer;
+            img {
+               width: 144px;
+               height: 50px;
+               @media (max-width: $max_width) {
+                  width: 92px;
+                  height: 33px;
+               }
+            }
+         }
+
+         .right-btns {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            gap: 16px;
+            font-weight: 500;
+            @media (max-width: $max_width) {
+               gap: 10px;
+            }
+
+            .search {
+               flex-grow: 1;
+               display: flex;
+               gap: 16px;
+               padding: 0 16px;
+               @media (max-width: $max_width) {
+                  padding: 0 0 0 16px;
+               }
+
+               input {
+                  cursor: pointer;
+                  background-color: transparent;
+                  width: 100%;
+               }
+
+               div {
+                  @media (max-width: $max_width) {
+                     display: flex;
+                     justify-content: center;
+                     border-radius: 100px;
+                     background-color: #ffffff0d;
+                     padding: 11px 8px;
+                     width: 44px;
+                     height: 44px;
+                  }
+                  .search-icon {
+                     cursor: pointer;
+                     font-size: 22px;
+                     width: 44px;
+                     color: #bababa;
+                     transition: 0.2s;
+                     &:hover {
+                        color: #fff;
+                     }
+                  }
+               }
+            }
+            @media (max-width: $max_width) {
+               .subscription,
+               .promo-code,
+               .login {
+                  display: none;
+               }
+            }
+
+            // mobile
+            .mobile-right-btns {
+               display: flex;
+               align-items: center;
+               gap: 10px;
+               font-size: 22px;
+
+               div {
+                  cursor: pointer;
+                  display: flex;
+                  justify-content: center;
+                  border-radius: 100px;
+                  background-color: #ffffff0d;
+                  padding: 11px 8px;
+                  width: 44px;
+                  height: 44px;
+                  color: #bababa;
+                  transition: 0.2s;
+                  &:hover {
+                     color: #fff;
+                  }
+               }
+               @media (min-width: $min_width) {
+                  display: none;
+               }
+            }
+            .subscription {
+               background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+               border-radius: 12px;
+               padding: 10px 16px;
+               cursor: pointer;
+               min-width: 140px;
+               text-align: center;
+               transition: 0.5s;
+               &:hover {
+                  background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+               }
+            }
+
+            .promo-code {
+               color: #bababa;
+               cursor: pointer;
+               padding: 10px 16px;
+               border-radius: 12px;
+               transition: 0.2s;
+               background-color: #ffffff0d;
+               &:hover {
+                  color: #fff;
+               }
+            }
+
+            .login {
+               color: #bababa;
+               cursor: pointer;
+               font-size: 24px;
+               transition: 0.2s;
+               &:hover {
+                  color: #fff;
+               }
+            }
+         }
+      }
+   }
+
+   .navigation {
+      border: 1px solid white;
+      position: fixed;
+      z-index: 999;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%);
+   }
+}
