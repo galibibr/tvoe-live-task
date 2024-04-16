@@ -6,16 +6,19 @@ header {
    top: 0;
    width: 100%;
    z-index: 999;
-   
+
    nav {
       width: 100%;
       position: fixed;
       top: 0;
-      background-color: #09090C;
+      background-color: #09090c;
       z-index: 999;
       border: 1px solid white;
 
       .container {
+         width: 100%;
+         max-width: 1200px;
+         margin: 0 auto;
          padding: 21px 32px;
          display: flex;
          align-items: center;
@@ -70,16 +73,17 @@ header {
                      padding: 11px 8px;
                      width: 44px;
                      height: 44px;
+                     transition: 0.3s;
+                     cursor: pointer;
+                     &:hover {
+                        background-color: #ffffff25;
+                        color: #fff;
+                     }
                   }
                   .search-icon {
-                     cursor: pointer;
                      font-size: 22px;
                      width: 44px;
                      color: #bababa;
-                     transition: 0.2s;
-                     &:hover {
-                        color: #fff;
-                     }
                   }
                }
             }
@@ -108,8 +112,10 @@ header {
                   width: 44px;
                   height: 44px;
                   color: #bababa;
-                  transition: 0.2s;
+                  transition: 0.3s;
+                  cursor: pointer;
                   &:hover {
+                     background-color: #ffffff25;
                      color: #fff;
                   }
                }
@@ -155,12 +161,74 @@ header {
       }
    }
 
-   .navigation {
-      border: 1px solid white;
+   .nav-container {
       position: fixed;
       z-index: 999;
-      bottom: 0;
+      bottom: 24px;
       left: 50%;
       transform: translate(-50%);
+      @media (max-width: $max_width) {
+         padding: 3px;
+         width: 100%;
+         max-width: 480px;
+         padding: 0 16px;
+      }
+      
+      .navigation {
+         display: flex;
+         padding: 8px 12px;
+         gap: 12.75px;
+         border-radius: 24px;
+         border: 1px solid #ffffff4d;
+         @media (max-width: $max_width) {
+            border-radius: 16px;
+            justify-content: space-between;
+            gap: 4.25px;
+
+         }
+         
+         a {
+            width: 81px;
+            height: 70px;
+            // padding: 4px 0 6px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            @media (max-width: $max_width) {
+               width: 64px;
+               height: 50px;
+            }
+            
+            .navigation-icons {
+               font-size: 22px;
+               position: relative;
+               z-index: 999;
+            }
+            p {
+               font-size: 10px;
+               font-weight: 500;
+               color: #bababa;
+               position: relative;
+               z-index: 999;
+            }
+            .active {
+               position: absolute;
+               z-index: -1;
+               background-image: url('../public/Active.svg');
+               background-repeat: no-repeat;
+               background-position: center;
+               background-size: contain;
+               width: 150%;
+               height: 150%;
+
+               @media (max-width: $max_width) {
+                  width: 180%;
+                  height: 180%;
+               }
+            }
+         }
+      }
    }
 }
