@@ -23,6 +23,7 @@ $min_width: 725px;
    img {
       display: block;
       width: 100%;
+      height: auto;
       object-fit: cover;
       background-position: right;
    }
@@ -34,18 +35,20 @@ $min_width: 725px;
       max-width: 1200px;
       margin: 0 auto;
       height: 100%;
-      
+      padding: 0 32px;
+      @media (max-width: $max_width) {
+         padding: 0 16px;
+      }
+
       .box {
-         padding: 0 32px;
+         position: relative;
+         z-index: 101;
          height: 100%;
          display: flex;
          flex-direction: column;
-         
          justify-content: end;
-         
          gap: 16px;
          @media (max-width: $max_width) {
-            padding: 0 16px;
             gap: 12px;
          }
 
@@ -67,31 +70,31 @@ $min_width: 725px;
             align-items: center;
             gap: 35px;
 
-            // li {
-            //    list-style-type: disc;
-            // }
-            // li:nth-child(1) {
-            //    list-style-type: none;
-            //    background-color: #2674fb;
-            //    border-radius: 8px;
-            //    padding: 5px 8px;
-            // }
-            // li:nth-child(3) {
-            //    @media (max-width: $max_width) {
-            //       display: block;
-            //    }
-            //    display: none;
-            // }
-            // li:nth-child(5),
-            // li:nth-child(6) {
-            //    display: block;
-            //    @media (max-width: $max_width) {
-            //       display: none;
-            //    }
-            // }
-            // li::marker {
-            //    color: hsla(0, 0%, 100%, 0.3);
-            // }
+            li {
+               list-style-type: disc;
+            }
+            li:nth-child(1) {
+               list-style-type: none;
+               background-color: #2674fb;
+               border-radius: 8px;
+               padding: 5px 8px;
+            }
+            li:nth-child(3) {
+               @media (max-width: $max_width) {
+                  display: block;
+               }
+               display: none;
+            }
+            li:nth-child(5),
+            li:nth-child(6) {
+               display: block;
+               @media (max-width: $max_width) {
+                  display: none;
+               }
+            }
+            li::marker {
+               color: hsla(0, 0%, 100%, 0.3);
+            }
          }
 
          .end_btns {

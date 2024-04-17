@@ -29,15 +29,15 @@ const TheBanner = () => {
       <>
          <Swiper
             spaceBetween={0}
-            centeredSlides={true}
+            centeredSlides={false}
             autoplay={{
                delay: 3000,
                disableOnInteraction: false,
             }}
             pagination={{
-               clickable: true,
+               clickable: false,
             }}
-            modules={[Autoplay, Pagination]}
+            modules={[Autoplay]}
             onAutoplayTimeLeft={onAutoplayTimeLeft}
             className="mySwiper">
             <SwiperSlide>

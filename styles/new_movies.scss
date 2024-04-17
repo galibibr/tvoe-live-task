@@ -1,0 +1,93 @@
+$max_width: 724px;
+$min_width: 725px;
+
+.container {
+   max-width: 1200px;
+   padding: 0 32px;
+   margin: 0 auto;
+
+   @media (max-width: $max_width) {
+      padding: 0 16px;
+   }
+}
+
+.title {
+   margin-top: 64px;
+   margin-bottom: 16px;
+   font-weight: 500;
+   font-size: 24px;
+}
+
+#app {
+   height: 100%;
+}
+
+#newMovies-swiper {
+   width: 100%;
+   height: 100%;
+   @media (max-width: $max_width) {
+      padding-left: 16px;
+   }
+   padding-left: 32px;
+
+   .swiper-slide {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      @media (max-width: $max_width) {
+         padding-right: 16px;
+      }
+      padding-right: 32px;
+      position: relative;
+
+      a,
+      .image {
+         width: 100%;
+         height: 100%;
+      }
+
+      .pos_absolute {
+         width: 100%;
+         position: absolute;
+         top: 0;
+         z-index: 1;
+         display: flex;
+         gap: 8px;
+         padding: 16px 32px;
+         @media (max-width: $max_width) {
+            padding: 8px 16px;
+         }
+
+         .rating,
+         .additionally {
+            border-radius: 8px;
+            padding: 5px 8px;
+            font-weight: 500;
+         }
+         .rating {
+            background-color: #2674fb;
+         }
+         .additionally {
+            background-color: #5a5a5ab6;
+            backdrop-filter: blur(10px);
+            border: 1px solid #ffffff4d;
+         }
+      }
+
+      .info_bottom {
+         width: 100%;
+         text-align: start;
+         margin-top: 12px;
+
+         font-size: 18px;
+         p:nth-child(1) {
+            font-weight: 500;
+            margin-bottom: 8px;
+            white-space: nowrap; /* Без переносов */
+            overflow: hidden; /* Скрываем лишнее */
+            text-overflow: ellipsis; /* Добавляем многоточие */
+            width: 100%; /* Растягиваем на всю доступную ширину */
+         }
+      }
+   }
+}
