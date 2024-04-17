@@ -1,3 +1,4 @@
+'use client'
 import movies from "@/scripts/movies-list"
 import { Movie_T } from "@/types/types"
 
@@ -10,6 +11,6 @@ type Props = {
 export default function TheMovie({ params: { id } }: Props) {
    const movie: Movie_T | undefined = movies.find((e) => e.id == id)
    return (
-      <>id: {movie?.name}</>
+      <div>id: {movie?.name} </div>
    )
 }

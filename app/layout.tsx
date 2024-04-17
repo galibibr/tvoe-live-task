@@ -23,7 +23,7 @@ export default function RootLayout({
             className={inter.className}
             style={{ display: "flex", flexDirection: "column" }}>
             <TheHeader />
-            <main style={{ flexGrow: 1, minHeight: '2000px' }}>{children}</main>
+            <main id="main">{children}</main>
             <TheFooter />
          </body>
       </html>

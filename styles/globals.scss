@@ -1,3 +1,6 @@
+$max_width: 724px;
+$min_width: 725px;
+
 * {
    padding: 0;
    margin: 0;
@@ -19,6 +22,10 @@ body {
 a {
    color: #fff;
    text-decoration: none;
+}
+
+button {
+   background-color: transparent;
 }
 
 ol,
@@ -48,4 +55,12 @@ html {
    height: 100%;
    background-color: #09090c;
    color: #fff;
+}
+
+#main {
+   padding-top: 83px;
+   min-height: 100%;
+   @media (max-width: $max_width) {
+      padding-top: 76px;
+   }
 }

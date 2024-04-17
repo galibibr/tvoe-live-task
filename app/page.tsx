@@ -1,19 +1,23 @@
+// 'use client';
 import Link from "next/link";
 import movies from "@/scripts/movies-list";
 import { Movie_T } from "@/types/types";
+import { TheBanner } from "@/components/TheBanner";
 
 export default function Home() {
    return (
-      <main>
+      <div>
+         {/* The Banner */}
+         <TheBanner />
          <ul>
             {movies.map((movie: Movie_T) => {
                return (
                   <li key={movie.id}>
-                     <Link href={`/${movie.id}`}>{movie.name}</Link>
+                     <Link href={`/movies/${movie.id}`}>{movie.name}</Link>
                   </li>
                );
             })}
          </ul>
-      </main>
+      </div>
    );
 }
