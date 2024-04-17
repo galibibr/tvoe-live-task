@@ -16,8 +16,6 @@ header {
 
       .container {
          width: 100%;
-         max-width: 1200px;
-         margin: 0 auto;
          padding: 21px 32px;
          display: flex;
          align-items: center;
@@ -174,22 +172,21 @@ header {
          max-width: 480px;
          padding: 0 16px;
       }
-      
+
       .navigation {
          display: flex;
          padding: 8px 12px;
          gap: 12.75px;
          border-radius: 24px;
          border: 1px solid #ffffff4d;
-         background-color: rgba(9, 9, 12, .7);
+         background-color: rgba(9, 9, 12, 0.7);
          backdrop-filter: blur(10px);
          @media (max-width: $max_width) {
             border-radius: 16px;
             justify-content: space-between;
             gap: 4.25px;
-
          }
-         
+
          a {
             width: 81px;
             height: 70px;
@@ -203,7 +200,7 @@ header {
                width: 64px;
                height: 50px;
             }
-            
+
             .navigation-icons {
                font-size: 22px;
                position: relative;
@@ -219,7 +216,7 @@ header {
             .active {
                position: absolute;
                z-index: -1;
-               background-image: url('../public/Active.svg');
+               background-image: url("../public/Active.svg");
                background-repeat: no-repeat;
                background-position: center;
                background-size: contain;

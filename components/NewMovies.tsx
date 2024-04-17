@@ -13,7 +13,7 @@ import { Movie_T } from "@/types/types";
 
 const NewMovies = () => {
    return (
-      <>
+      <div>
          <div className="title container">Новинки</div>
 
          <Swiper
@@ -70,7 +70,7 @@ const NewMovies = () => {
                );
             })}
          </Swiper>
-      </>
+      </div>
    );
 };
 

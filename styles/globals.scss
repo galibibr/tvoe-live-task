@@ -62,4 +62,13 @@ html {
    @media (max-width: $max_width) {
       padding-top: 76px;
    }
+
+   .layout_page {
+      display: flex;
+      flex-direction: column;
+      @media (max-width: $max_width) {
+         gap: 32px;
+      }
+      gap: 64px;
+   }
 }

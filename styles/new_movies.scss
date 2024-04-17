@@ -2,9 +2,7 @@ $max_width: 724px;
 $min_width: 725px;
 
 .container {
-   max-width: 1200px;
    padding: 0 32px;
-   margin: 0 auto;
 
    @media (max-width: $max_width) {
       padding: 0 16px;
@@ -13,9 +11,13 @@ $min_width: 725px;
 
 .title {
    margin-top: 64px;
-   margin-bottom: 16px;
+   margin-left: auto;
+   margin-right: auto;
    font-weight: 500;
    font-size: 24px;
+   @media (max-width: $max_width) {
+      margin-top: 32px;
+   }
 }
 
 #app {
@@ -23,6 +25,8 @@ $min_width: 725px;
 }
 
 #newMovies-swiper {
+   padding-top: 16px;
+   padding-bottom: 10px;
    width: 100%;
    height: 100%;
    @media (max-width: $max_width) {
@@ -40,10 +44,16 @@ $min_width: 725px;
       padding-right: 32px;
       position: relative;
 
+      transition: 0.2s;
+      &:hover {
+         transform: scale(1.02);
+      }
+
       a,
       .image {
          width: 100%;
          height: 100%;
+         border-radius: 24px;
       }
 
       .pos_absolute {
