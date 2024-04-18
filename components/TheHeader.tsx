@@ -67,7 +67,6 @@ const TheHeader = () => {
                      </div>
                   </div>
                   <div className="mobile-right-btns">
-                     -*
                      <div>
                         <GoBell />
                      </div>

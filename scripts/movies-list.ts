@@ -42,7 +42,7 @@ const movies: Movie_T[] = [
       additionally: 'Премьера'
    },
    {
-      id: 9,
+      id: 5,
       name: "Моё прекрасное несчастье",
       rating: 9.8,
       img: 'https://avatars.mds.yandex.net/get-kinopoisk-image/6201401/fe6d2d90-3dd1-48c9-9989-4ccc9fa5a3b0/600x900',
@@ -52,21 +52,21 @@ const movies: Movie_T[] = [
       // additionally: 'Премьера'
    },
    {
-      id: 10,
-      name: "Стартрек бесконечность",
-      rating: 9.6,
-      img: 'https://lostfilm.info/images/photo/95/3424963_944426.jpg',
-      year: 2020,
+      id: 6,
+      name: "На западном фронте без перемен",
+      rating: 8.4,
+      img: 'https://upload.wikimedia.org/wikipedia/ru/4/49/%D0%9D%D0%B0_%D0%97%D0%B0%D0%BF%D0%B0%D0%B4%D0%BD%D0%BE%D0%BC_%D1%84%D1%80%D0%BE%D0%BD%D1%82%D0%B5_%D0%B1%D0%B5%D0%B7_%D0%BF%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD_%282022%29_-_%D0%BF%D0%BE%D1%81%D1%82%D0%B5%D1%80.png',
+      year: 2019,
       time: '2 часа 37 мин',
-      category: 'top',
-      // additionally: 'Премьера'
+      category: 'new',
+      additionally: 'Премьера'
    },
    {
-      id: 11,
-      name: "Джон Уик",
-      rating: 9.5,
-      img: 'https://upload.wikimedia.org/wikipedia/ru/thumb/3/3b/John_Wick_4_poster.jpg/200px-John_Wick_4_poster.jpg',
-      year: 2020,
+      id: 7,
+      name: "Моё прекрасное несчастье",
+      rating: 7.8,
+      img: 'https://avatars.mds.yandex.net/get-kinopoisk-image/6201401/fe6d2d90-3dd1-48c9-9989-4ccc9fa5a3b0/600x900',
+      year: 2018,
       time: '2 часа 37 мин',
       category: 'top',
       // additionally: 'Премьера'

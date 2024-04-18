@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "@/styles/banner.scss";
 // import required modules
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 
 import avatar from "@/public/avatar.jpg";
 import avatar_title from "@/public/avatar-title.png";
