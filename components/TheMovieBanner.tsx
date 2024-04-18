@@ -16,11 +16,6 @@ const TheMovieBanner = ({ movie }: { movie: Movie_T | undefined }) => {
                <img src={movie?.img} alt="Avatar" className="img_bg" />
                <div className="container">
                   <div className="box">
-                     {/* <Image
-                        className="title_of_movie"
-                        src={avatar_title}
-                        alt="avatar title"
-                     /> */}
                      <p className="movie_name">{movie?.name}</p>
                      <ul>
                         <li>7.9</li>

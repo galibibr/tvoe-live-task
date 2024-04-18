@@ -16,6 +16,9 @@ import avatar_title from "@/public/avatar-title.png";
 import Image from "next/image";
 import { FaRegBookmark, FaRegHeart } from "react-icons/fa";
 import { PiShareFat } from "react-icons/pi";
+import movies from "@/scripts/movies-list";
+import { Movie_T } from "@/types/types";
+import Link from "next/link";
 
 const TheBanner = () => {
    const progressCircle: any = useRef(null);
@@ -39,8 +42,46 @@ const TheBanner = () => {
             }}
             modules={[Autoplay]}
             onAutoplayTimeLeft={onAutoplayTimeLeft}
-            className="mySwiper">
-            <SwiperSlide>
+            className="mySwiper"
+            id="headerBanner">
+            {movies.map((movie: Movie_T) => {
+               return (
+                  <SwiperSlide key={movie.id}>
+                     <img src={movie.img} alt="Avatar" />
+                     <div className="container">
+                        <div className="box">
+                           <div className="movie_name">{movie.name}</div>
+                           <ul>
+                              <li>7.9</li>
+                              <li>2024</li>
+                              <li>1 сезон</li>
+                              <li>Фантези</li>
+                              <li>США</li>
+                              <li>16+</li>
+                           </ul>
+                           <div className="end_btns">
+                              <Link
+                                 href={`/movies/${movie.id}`}
+                                 className="btn_more">
+                                 Подробнее
+                              </Link>
+                              <button className="other_btn">
+                                 <FaRegBookmark />
+                              </button>
+                              <button className="other_btn">
+                                 <FaRegHeart />
+                              </button>
+                              <button className="other_btn">
+                                 <PiShareFat />
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="bg-grad" />
+                  </SwiperSlide>
+               );
+            })}
+            {/* <SwiperSlide>
                <Image src={avatar} alt="Avatar" />
                <div className="container">
                   <div className="box">
@@ -105,40 +146,7 @@ const TheBanner = () => {
                   </div>
                </div>
                <div id="bg-grad" />
-            </SwiperSlide>
-            <SwiperSlide>
-               <Image src={avatar} alt="Avatar" />
-               <div className="container">
-                  <div className="box">
-                     <Image
-                        className="title_of_movie"
-                        src={avatar_title}
-                        alt="avatar title"
-                     />
-                     <ul>
-                        <li>7.9</li>
-                        <li>2024</li>
-                        <li>1 сезон</li>
-                        <li>Фантези</li>
-                        <li>США</li>
-                        <li>16+</li>
-                     </ul>
-                     <div className="end_btns">
-                        <button className="btn_more">Подробнее</button>
-                        <button className="other_btn">
-                           <FaRegBookmark />
-                        </button>
-                        <button className="other_btn">
-                           <FaRegHeart />
-                        </button>
-                        <button className="other_btn">
-                           <PiShareFat />
-                        </button>
-                     </div>
-                  </div>
-               </div>
-               <div id="bg-grad" />
-            </SwiperSlide>
+            </SwiperSlide> */}
             {/* display none */}
             <div className="autoplay-progress" slot="container-end">
                <svg viewBox="0 0 48 48" ref={progressCircle}>
