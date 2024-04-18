@@ -13,14 +13,15 @@ const TheMovieBanner = ({ movie }: { movie: Movie_T | undefined }) => {
       <>
          <div className="box_mb">
             <div className="movie_banner">
-               <Image src={avatar} alt="Avatar" />
+               <img src={movie?.img} alt="Avatar" className="img_bg" />
                <div className="container">
                   <div className="box">
-                     <Image
+                     {/* <Image
                         className="title_of_movie"
                         src={avatar_title}
                         alt="avatar title"
-                     />
+                     /> */}
+                     <p className="movie_name">{movie?.name}</p>
                      <ul>
                         <li>7.9</li>
                         <li>2024</li>

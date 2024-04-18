@@ -143,6 +143,120 @@ export default function TheMovie({ params: { id } }: Props) {
                вашему здоровью.
             </p>
          </div>
+         <div className="raiting_mv container">
+            <p>Рейтинг TVOЁ {movie?.rating}</p>
+            <button>Поставить оценку</button>
+         </div>
+         <p className="reviews_p container">Отзывы &gt;</p>
+         <Swiper
+            slidesPerView={1.6}
+            spaceBetween={0}
+            // pagination={{
+            //    clickable: false,
+            // }}
+            freeMode={true}
+            breakpoints={{
+               540: {
+                  slidesPerView: 1.6,
+                  spaceBetween: 0,
+               },
+               768: {
+                  slidesPerView: 2.4,
+                  spaceBetween: 0,
+               },
+               1024: {
+                  slidesPerView: 2.8,
+                  spaceBetween: 0,
+               },
+               1200: {
+                  slidesPerView: 3.0,
+                  spaceBetween: 0,
+               },
+            }}
+            modules={[FreeMode]}
+            className="mySwiper"
+            id="rw_swiper">
+            <SwiperSlide>
+               <div className="name_data">
+                  <div className="lft">
+                     <p>Николай</p>
+                     <p>10 Мая 2023</p>
+                  </div>
+                  <div className="rgt">9</div>
+               </div>
+               <p className="rw_desk">
+                  Как по мне, обсуждать качество сериала довольно глупо.
+                  Субъективно для меня — оно очевидно плохого уровня.
+               </p>
+               <div className="read_more_cont">
+                  <button className="read_more">Читать дальше</button>
+               </div>
+            </SwiperSlide>
+            <SwiperSlide>
+               <div className="name_data">
+                  <div className="lft">
+                     <p>Алексей</p>
+                     <p>10 Мая 2023</p>
+                  </div>
+                  <div className="rgt">9</div>
+               </div>
+               <p className="rw_desk">
+                  Как по мне, обсуждать качество сериала довольно глупо.
+                  Субъективно для меня — оно очевидно плохого уровня.
+               </p>
+               <div className="read_more_cont">
+                  <button className="read_more">Читать дальше</button>
+               </div>
+            </SwiperSlide>
+            <SwiperSlide>
+               <div className="name_data">
+                  <div className="lft">
+                     <p>Николай</p>
+                     <p>10 Мая 2023</p>
+                  </div>
+                  <div className="rgt">9</div>
+               </div>
+               <p className="rw_desk">
+                  Как по мне, обсуждать качество сериала довольно глупо.
+                  Субъективно для меня — оно очевидно плохого уровня.
+               </p>
+               <div className="read_more_cont">
+                  <button className="read_more">Читать дальше</button>
+               </div>
+            </SwiperSlide>
+            <SwiperSlide>
+               <div className="name_data">
+                  <div className="lft">
+                     <p>Николай</p>
+                     <p>10 Мая 2023</p>
+                  </div>
+                  <div className="rgt">9</div>
+               </div>
+               <p className="rw_desk">
+                  Как по мне, обсуждать качество сериала довольно глупо.
+                  Субъективно для меня — оно очевидно плохого уровня.
+               </p>
+               <div className="read_more_cont">
+                  <button className="read_more">Читать дальше</button>
+               </div>
+            </SwiperSlide>
+            <SwiperSlide>
+               <div className="name_data">
+                  <div className="lft">
+                     <p>Николай</p>
+                     <p>10 Мая 2023</p>
+                  </div>
+                  <div className="rgt">9</div>
+               </div>
+               <p className="rw_desk">
+                  Как по мне, обсуждать качество сериала довольно глупо.
+                  Субъективно для меня — оно очевидно плохого уровня.
+               </p>
+               <div className="read_more_cont">
+                  <button className="read_more">Читать дальше</button>
+               </div>
+            </SwiperSlide>
+         </Swiper>
       </div>
    );
 }
